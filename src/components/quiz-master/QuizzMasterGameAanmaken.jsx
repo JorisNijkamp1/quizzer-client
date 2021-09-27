@@ -15,6 +15,7 @@ import {openWebSocket} from "../../websocket";
 import Card from "react-bootstrap/Card";
 import Menu from "../Menu";
 import HeaderTitel from "../HeaderTitel";
+require('dotenv').config();
 
 class GameAanmakenUI extends React.Component {
     constructor(props) {
@@ -33,7 +34,7 @@ class GameAanmakenUI extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
 
-        const url = 'http://localhost:3001/api/game';
+        const url = `${process.env.REACT_APP_API}/api/game`;
         let data = {
             gameRoomName: this.state.gameRoomName
         };
@@ -69,6 +70,7 @@ class GameAanmakenUI extends React.Component {
     }
 
     createGameForm() {
+        console.log(process.env.API);
         return (
             <Container>
                 <Row className="min-vh-100">
