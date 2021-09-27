@@ -38,6 +38,7 @@ class GameAanmakenUI extends React.Component {
         let data = {
             gameRoomName: this.state.gameRoomName
         };
+
         const options = {
             method: 'POST',
             body: JSON.stringify(data),
