@@ -1,5 +1,12 @@
 # build environment
 FROM node:14 as builder
+
+# All .ENV variables
+ARG REACT_APP_API
+
+# Asign .ENV variables
+ENV REACT_APP_API=$REACT_APP_API
+
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH

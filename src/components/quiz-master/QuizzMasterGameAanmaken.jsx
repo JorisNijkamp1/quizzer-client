@@ -70,7 +70,6 @@ class GameAanmakenUI extends React.Component {
     }
 
     createGameForm() {
-        console.log(process.env.API);
         return (
             <Container>
                 <Row className="min-vh-100">
