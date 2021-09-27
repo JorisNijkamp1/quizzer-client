@@ -46,7 +46,7 @@ class GameAanmakenUI extends React.Component {
                 'Content-Type': 'application/json',
             },
             credentials: 'include',
-            mode: 'no-cors'
+            mode: 'cors'
         };
 
         fetch(url, options)
