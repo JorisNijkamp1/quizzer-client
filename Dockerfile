@@ -15,7 +15,7 @@ RUN npm install
 RUN npm run build
 
 # production environment
-FROM nginx:1.21.3-alpine
+FROM socialengine/nginx-spa:latest
 RUN rm -rf /etc/nginx/conf.d
 RUN mkdir -p /etc/nginx/conf.d
 COPY ./default.conf /etc/nginx/conf.d/
